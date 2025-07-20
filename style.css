@@ -1,0 +1,179 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Warna latar belakang body */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Membuat body setidaknya setinggi layar */
+    overflow: hidden; /* Mencegah scroll pada body */
+}
+
+#game-container {
+    position: relative; /* Untuk memposisikan elemen di dalamnya secara relatif/absolut */
+    width: 1280px; /* Lebar standar untuk novel visual (bisa disesuaikan) */
+    height: 720px; /* Tinggi standar untuk novel visual (bisa disesuaikan) */
+    background-color: #fff; /* Warna latar belakang kontainer game */
+    overflow: hidden; /* Mencegah konten meluap */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Efek bayangan tipis */
+    border-radius: 8px; /* Sudut sedikit membulat */
+}
+
+#background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover; /* Membuat gambar latar belakang menutupi seluruh area */
+    background-position: center; /* Memposisikan gambar latar belakang di tengah */
+    z-index: 1; /* Latar belakang di bawah elemen lain */
+    transition: opacity 1s ease-in-out; /* Transisi opacity untuk pergantian latar belakang */
+    opacity: 0; /* Dimulai dengan opacity 0, akan diubah JS */
+}
+
+#characters {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center; /* Awalnya kita bisa atur di tengah */
+    align-items: flex-end; /* Karakter biasanya di bagian bawah */
+    pointer-events: none; /* Membuat area karakter "tembus" klik, agar klik diteruskan ke elemen di bawahnya jika tidak ada karakter */
+    z-index: 2; /* Karakter di atas latar belakang */
+}
+
+#characters img {
+    max-height: 80%; /* Tinggi maksimum karakter relatif terhadap area karakter */
+    margin-bottom: 20px; /* Sedikit ruang di bawah karakter */
+    /* margin-left dan margin-right tidak perlu jika hanya 1 karakter di tengah */
+    /* Untuk banyak karakter, bisa diatur secara dinamis oleh JS */
+    opacity: 0; /* Mulai dengan opacity 0 untuk transisi */
+    transition: opacity 0.5s ease-in-out; /* Transisi untuk karakter muncul */
+}
+
+#dialogue-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 150px; /* Tinggi minimum kotak dialog */
+    background-color: rgba(0, 0, 0, 0.8); /* Latar belakang semi-transparan untuk dialog */
+    color: white;
+    padding: 20px;
+    box-sizing: border-box; /* Padding termasuk dalam lebar dan tinggi */
+    z-index: 3; /* Kotak dialog di atas karakter */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Untuk mendorong tombol ke bawah */
+    opacity: 0; /* Dimulai dengan opacity 0, akan diubah JS */
+    transition: opacity 0.5s ease-in-out; /* Transisi opacity untuk kotak dialog */
+}
+
+#character-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #ffd700; /* Warna nama karakter */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Efek bayangan teks */
+}
+
+#dialogue-text {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 15px; /* Ruang sebelum tombol */
+    flex-grow: 1; /* Memungkinkan teks mengambil ruang yang tersedia */
+}
+
+#next-button {
+    align-self: flex-end; /* Posisikan tombol di kanan bawah */
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.1s ease; /* Efek transisi hover dan klik */
+}
+
+#next-button:hover {
+    background-color: #777;
+    transform: translateY(-2px); /* Sedikit naik saat hover */
+}
+
+#next-button:active {
+    transform: translateY(1px); /* Sedikit turun saat diklik */
+}
+
+#choices-container {
+    position: absolute;
+    bottom: 180px; /* Di atas kotak dialog, sesuaikan jika tinggi dialog berubah */
+    left: 50%;
+    transform: translateX(-50%); /* Posisi tengah horizontal */
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    z-index: 4; /* Pilihan di atas kotak dialog */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+#choices-container button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    min-width: 200px; /* Lebar minimum tombol pilihan */
+    text-align: center;
+}
+
+#choices-container button:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+#choices-container button:active {
+    transform: translateY(1px);
+}
+
+/* Styling untuk layar loading */
+#loading-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    color: white;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    text-align: center;
+    flex-direction: column;
+}
+
+#loading-screen::after {
+    content: 'Memuat...'; /* Teks di bawah spinner */
+    font-size: 0.5em;
+    margin-top: 10px;
+    animation: pulse 1.5s infinite alternate; /* Animasi berkedip */
+}
+
+/* Animasi untuk loading screen (opsional) */
+@keyframes pulse {
+    from { opacity: 0.7; }
+    to { opacity: 1; }
+}
