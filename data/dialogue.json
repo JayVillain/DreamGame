@@ -1,0 +1,197 @@
+[
+  {
+    "chapter": 1,
+    "title": "Senja di Balendrina",
+    "scenes": [
+      {
+        "background": "gracia_bedroom_day.png",
+        "events": [
+          {"type": "narration", "text": "Gracia, seorang siswi SMA Balendrina di Edinburgh, merasakan kelelahan yang luar biasa setelah seharian penuh pelajaran."},
+          {"type": "narration", "text": "Begitu tiba di rumah, tanpa mengganti seragam, ia langsung merebahkan diri di kasur."},
+          {"type": "narration", "text": "Rasa kantuk yang tak tertahankan langsung menariknya ke alam mimpi."},
+          {"type": "narration", "text": "Di sinilah, tanpa disadarinya, sebuah perjalanan tak terduga akan dimulai."}
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": 2,
+    "title": "Pertemuan di Alam Mimpi yang Memesona",
+    "scenes": [
+      {
+        "background": "dream_garden.png",
+        "events": [
+          {"type": "narration", "text": "Ketika Gracia membuka mata, ia tidak lagi berada di kamarnya. Sekelilingnya adalah pemandangan yang asing namun begitu memesona."},
+          {"type": "narration", "text": "Ia berada di sebuah taman yang luas, dipenuhi bunga-bunga bercahaya dengan warna-warna yang belum pernah ia lihat."},
+          {"type": "narration", "text": "Di kejauhan terdengar alunan melodi lembut seperti bisikan angin. Udara terasa sejuk dan aroma manis bunga memenuhi indranya."},
+          {"type": "character_dialogue", "character": "Gracia", "text": "Aku... di mana ini?"},
+          {"type": "narration", "text": "Tiba-tiba, dari balik pepohonan rindang, seorang pemuda muncul. Rambutnya hitam legam, matanya sebiru samudra, dan senyumnya begitu menawan. Ia adalah Alexandrius, atau yang akrab disapa Alex."},
+          {"type": "character_dialogue", "character": "Alex", "text": "Halo. Kau terlihat sedikit tersesat. Apakah kau baik-baik saja?"},
+          {"type": "narration", "text": "Gracia merasa aneh namun sekaligus tertarik dengan aura Alex yang ramah dan penuh perhatian."},
+          {"type": "narration", "text": "Alex dengan cepat menunjukkan sisi romantisnya; ia memetik sekuntum bunga bercahaya dan menyematkannya di rambut Gracia, memuji kecantikannya dengan tulus."},
+          {"type": "character_dialogue", "character": "Alex", "text": "Kau terlihat cantik sekali dengan bunga ini, Gracia."},
+          {"type": "narration", "text": "Ia mengajaknya berjalan-jalan mengelilingi taman, menjelaskan tentang setiap detail unik dari tempat itu, seolah ia adalah pemandu pribadi Gracia di dunia yang indah ini."},
+          {"type": "narration", "text": "Selama berjalan, Alex selalu siaga dan peka. Ia menuntun Gracia melewati jalan setapak yang sedikit berbatu, memastikan Gracia tidak tersandung."},
+          {"type": "narration", "text": "Ia juga bercerita tentang hal-hal kecil yang lucu, membuat Gracia tertawa lepas dan merasa nyaman."},
+          {"type": "narration", "text": "Gracia memperhatikan bagaimana Alex selalu memilihkan tempat duduk yang nyaman saat mereka beristirahat di tepi kolam yang memancarkan cahaya redup."},
+          {"type": "narration", "text": "Atau bagaimana Alex selalu menjadi pendengar yang baik ketika Gracia mulai berbagi cerita tentang dirinya."},
+          {"type": "narration", "text": "Setiap gerak-gerik Alex memancarkan kepedulian dan kelembutan yang membuat Gracia betah bersamanya."},
+          {"type": "narration", "text": "Gracia mulai merasakan adanya ikatan aneh namun menyenangkan dengan Alex, seolah-olah mereka sudah lama mengenal."}
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": 3,
+    "title": "Petualangan Manis Bersama Alex",
+    "scenes": [
+      {
+        "background": "dream_garden.png",
+        "events": [
+          {"type": "narration", "text": "Hari-hari (atau malam-malam) Gracia dalam mimpi diisi dengan berbagai petualangan manis bersama Alex."},
+          {"type": "narration", "text": "Mereka menjelajahi tempat-tempat indah, berbagi cerita dan tawa, serta saling mengenal satu sama lain."},
+          {"type": "narration", "text": "Alex selalu berhasil membuat Gracia tersipu dengan kata-kata romantis dan sikapnya yang sangat peduli."},
+          {"type": "narration", "text": "Gracia mulai merasa ada ikatan yang kuat dengan Alex, seolah-olah mereka sudah lama mengenal."}
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": 4,
+    "title": "Rahasia dan Kedekatan yang Mendalam",
+    "scenes": [
+      {
+        "background": "dream_garden.png",
+        "events": [
+          {"type": "narration", "text": "Hubungan Gracia dan Alex semakin dalam. Alex mengungkapkan sedikit demi sedikit tentang dirinya, meski masih banyak misteri yang menyelimuti keberadaannya di dunia mimpi ini."},
+          {"type": "narration", "text": "Gracia pun semakin terbuka, menceritakan tentang kehidupannya di dunia nyata."},
+          {"type": "narration", "text": "Mereka menemukan banyak kesamaan dalam minat dan pandangan hidup, membuat mereka merasa saling melengkapi."},
+          {"type": "narration", "text": "Gracia mulai berharap mimpi ini tidak akan pernah berakhir."}
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": 5,
+    "title": "Sentuhan Kenyataan dalam Khayalan",
+    "scenes": [
+      {
+        "background": "dream_garden.png",
+        "events": [
+          {"type": "narration", "text": "Gracia mulai merasakan adanya kejanggalan kecil dalam mimpinya. Beberapa kali ia merasa seperti ada benang tipis yang menariknya kembali ke dunia nyata."},
+          {"type": "narration", "text": "Namun Alex selalu berhasil mengalihkan perhatiannya. Alex tampak lebih protektif dan berusaha membuat Gracia tetap fokus pada kebersamaan mereka, seolah tahu bahwa waktu mereka tidak banyak."},
+          {"type": "narration", "text": "Gracia mengabaikan perasaan itu, terlalu menikmati kehadiran Alex."}
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": 6,
+    "title": "Bayangan Perpisahan",
+    "scenes": [
+      {
+        "background": "dream_garden.png",
+        "events": [
+          {"type": "narration", "text": "Suasana dalam mimpi mulai berubah. Ada melankoli yang menyelimuti setiap pertemuan Gracia dan Alex."},
+          {"type": "narration", "text": "Alex terlihat lebih sering termenung, dan percakapan mereka dipenuhi dengan nada perpisahan yang samar."},
+          {"type": "narration", "text": "Gracia merasakan firasat buruk, namun ia mencoba menepisnya."},
+          {"type": "narration", "text": "Alex berusaha menghibur dan meyakinkan Gracia bahwa kenangan mereka akan selalu ada."}
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": 7,
+    "title": "Sebuah Janji dan Air Mata Perpisahan",
+    "scenes": [
+      {
+        "background": "beautiful_sunset_place.png",
+        "events": [
+          {"type": "narration", "text": "Hari perpisahan tiba. Alex membawa Gracia ke sebuah tempat yang sangat indah, dipenuhi bunga-bunga bermekaran dan cahaya senja yang hangat."},
+          {"type": "character_dialogue", "character": "Alex", "text": "Gracia... Terima kasih. Terima kasih sudah datang ke mimpiku."},
+          {"type": "narration", "text": "Dengan suara bergetar, Alex mengungkapkan rasa syukurnya atas kehadiran Gracia dalam mimpinya."},
+          {"type": "narration", "text": "Ia memberikan sebuah surat yang tergulung rapi kepada Gracia, berisikan kata-kata perpisahan yang paling romantis dan tulus."},
+          {"type": "character_dialogue", "character": "Alex", "text": "Ini untukmu. Bacalah saat kau bangun nanti. Janji padaku."},
+          {"type": "narration", "text": "Tepat setelah Gracia menerima surat itu, ia merasakan goncangan. Matanya terbuka, dan ia terbangun di kamarnya sendiri, air mata membasahi pipinya."},
+          {"type": "narration", "text": "Mimpi itu terasa begitu nyata, namun kini ia kembali ke kenyataan."}
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": 8,
+    "title": "Kembali ke Realitas yang Membingungkan",
+    "scenes": [
+      {
+        "background": "gracia_bedroom_night.png",
+        "events": [
+          {"type": "narration", "text": "Gracia terbangun dalam kebingungan yang luar biasa. Selama ini, ia hanya bermimpi? Rasa kecewa dan hampa melingkupinya."},
+          {"type": "character_dialogue", "character": "Gracia", "text": "Ini... ini hanya mimpi?"},
+          {"type": "narration", "text": "Ia terdiam cukup lama, memproses segala yang terjadi dalam mimpinya. Ketika melirik jam di samping tempat tidurnya, matanya membelalak kaget. Pukul 06:40! Ia sudah terlambat untuk sekolah."},
+          {"type": "narration", "text": "Dengan tergesa-gesa, Gracia mandi dan bergegas pergi."},
+          {"type": "background", "image_name": "school_hallway.png", "events": []},
+          {"type": "narration", "text": "Sepanjang pelajaran, pikirannya terus melayang pada mimpinya dengan Alex."},
+          {"type": "background", "image_name": "city_street_day.png", "events": []},
+          {"type": "narration", "text": "Setelah pulang sekolah, setibanya di kamar..."},
+          {"type": "background", "image_name": "gracia_bedroom_day.png", "events": []},
+          {"type": "display_image", "image": "alex_letter.png", "text": "Ia menemukan sebuah surat tergeletak di meja belajarnya. Surat itu persis sama dengan yang diberikan Alex di mimpi."},
+          {"type": "narration", "text": "Dengan tangan bergetar, Gracia membukanya. Membaca setiap barisnya, air matanya kembali tumpah."},
+          {"type": "hide_image", "text": "Surat itu berisikan kata-kata yang sangat romantis dan penuh rasa syukur atas kehadirannya."},
+          {"type": "narration", "text": "Dan selesailah Bab 8."}
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": 9,
+    "title": "Kehadiran yang Tak Terduga",
+    "scenes": [
+      {
+        "background": "classroom.png",
+        "events": [
+          {"type": "narration", "text": "Keesokan harinya di sekolah, suasana kelas cukup ramai. Banyak yang sedang berbincang membahas olahraga, pelajaran, dan lainnya."},
+          {"type": "narration", "text": "Gracia hanya diam dan masih memikirkan mimpi itu."},
+          {"type": "narration", "text": "Tiba-tiba seorang guru datang ke kelas Gracia itu."},
+          {"type": "character_dialogue", "character": "Teacher", "text": "Perhatian semuanya! Kita kedatangan murid baru."},
+          {"type": "narration", "text": "Semua murid terdiam karena lumayan kaget, kok ada murid pindahan di akhir sekolah ingin pulang bukan di awal."},
+          {"type": "narration", "text": "Guru memanggil murid tersebut untuk masuk kelas."},
+          {"type": "narration", "text": "Seketika, suasana kelas lumayan ramai lagi karena murid pindahan itu seorang lelaki yang sangat tampan. Para wanita tentu saja cukup heboh."},
+          {"type": "narration", "text": "Gracia hanya terdiam dan dia belum melihat lelaki itu, dia hanya melihat keluar jendela."},
+          {"type": "character_dialogue", "character": "Alex", "text": "Salam kenal semuanya, nama saya Alexandrius."},
+          {"type": "narration", "text": "Disitu Gracia langsung melihat ke arah murid pindahan itu karena terkejut. Ia masih terdiam dan tidak menyangka kok bisa ada kejadian seperti ini."},
+          {"type": "narration", "text": "Bab 9 pun berakhir."}
+        ]
+      }
+    ]
+  },
+  {
+    "chapter": 10,
+    "title": "Mimpi yang Menjadi Nyata",
+    "scenes": [
+      {
+        "background": "school_hallway.png",
+        "events": [
+          {"type": "narration", "text": "Saat sekolah lagi, Gracia memberanikan diri bertanya kepada Alex."},
+          {"type": "character_dialogue", "character": "Gracia", "text": "Alex, kau pindahan dari mana?"},
+          {"type": "narration", "text": "Mereka berbincang-bincang cukup lama. Sebenarnya tujuan Gracia adalah ingin menanyakan apakah Alex murid baru ini adalah Alex yang sama dengan di mimpi nya itu."},
+          {"type": "narration", "text": "Gracia berbincang hanya untuk memastikan saja. Dan ya, banyak kemiripan dari makanan kesukaannya, dan juga dia suka membaca."},
+          {"type": "narration", "text": "Gracia makin bingung disitu. Dan Alex pun seperti menyadari gerak-gerik Gracia."},
+          {"type": "character_dialogue", "character": "Alex", "text": "Apakah kamu menanyakan hal ini untuk mencari kesamaan diriku dengan orang yang kamu kenal?"},
+          {"type": "narration", "text": "Gracia pun terdiam karena terkejut disitu, dan dia berkata tidak namun terbata-bata."},
+          {"type": "narration", "text": "Disitu Alex hanya tersenyum. Senyum yang sangat familiar."},
+          {"type": "character_dialogue", "character": "Alex", "text": "Baiklah Gracia, semoga kita semakin akrab ya ke depannya."},
+          {"type": "narration", "text": "Gracia pun tersenyum dengan ucapan Alex itu dan berkata:"},
+          {"type": "character_dialogue", "character": "Gracia", "text": "Baik Alex, sama aku juga."},
+          {"type": "narration", "text": "Setelah pulang sekolah, setibanya di rumah Gracia terbaring di kasurnya."},
+          {"type": "background", "image_name": "gracia_bedroom_day.png", "events": []},
+          {"type": "narration", "text": "Ia masih membayang-bayangkan Alex yang di mimpinya itu."},
+          {"type": "narration", "text": "Dan disitu pun dia tersadar meskipun banyak kesamaan dan namanya sangat sama persis, Alex yang ada di dunia mimpinya itu tetaplah Alex yang dia kenal."},
+          {"type": "narration", "text": "Mau orang lain memiliki nama yang sama dan sikapnya, dia hanya mengenal Alex yang ada pada mimpinya itu."},
+          {"type": "character_dialogue", "character": "Gracia", "text": "Alex, walaupun dirimu datang hanya sekilas, namun kenanganmu padaku lumayan banyak."},
+          {"type": "character_dialogue", "character": "Gracia", "text": "Semoga nanti aku bisa bertemu dengan dirimu lagi, Alex yang ku kenal."},
+          {"type": "narration", "text": "Dan cerita pun berakhir. Apakah ini hanyalah kebetulan semata, ataukah takdir yang mempertemukan mereka kembali?"}
+        ]
+      }
+    ]
+  }
+]
