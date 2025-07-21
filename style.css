@@ -2,22 +2,38 @@ body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0; /* Warna latar belakang body */
+    background-color: #1a1a2e; /* Deep dark blue-purple for body background */
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Membuat body setidaknya setinggi layar */
-    overflow: hidden; /* Mencegah scroll pada body */
+    min-height: 100vh; /* Ensure body takes at least full viewport height */
+    overflow: hidden; /* Prevent body scrollbars */
 }
 
 #game-container {
-    position: relative; /* Untuk memposisikan elemen di dalamnya secara relatif/absolut */
-    width: 1280px; /* Lebar standar untuk novel visual (bisa disesuaikan) */
-    height: 720px; /* Tinggi standar untuk novel visual (bisa disesuaikan) */
-    background-color: #fff; /* Warna latar belakang kontainer game */
-    overflow: hidden; /* Mencegah konten meluap */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Efek bayangan tipis */
-    border-radius: 8px; /* Sudut sedikit membulat */
+    position: relative;
+    /* Responsive sizing based on viewport */
+    width: 90vw; /* Take 90% of viewport width */
+    height: 50.625vw; /* Calculated height for 16:9 aspect ratio (9/16 = 0.5625) */
+    max-width: 1280px; /* Max width to prevent pixelation on very large screens */
+    max-height: 720px; /* Max height to prevent pixelation on very large screens */
+    min-width: 480px; /* Minimum width for very small screens (e.g., mobile landscape) */
+    min-height: 270px; /* Minimum height to maintain aspect ratio */
+    
+    background-color: #16213e; /* Slightly lighter dark blue for game container background */
+    overflow: hidden; /* Hide overflowing content */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4); /* More prominent shadow effect */
+    border-radius: 12px; /* Slightly more rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle white border */
+}
+
+/* Media query for screens where height is a limiting factor (e.g., shorter laptops) */
+@media (max-height: 800px) { 
+    #game-container {
+        width: calc(90vh * (16 / 9)); /* Calculate width based on 90vh to maintain 16:9 ratio */
+        height: 90vh; /* Take 90% of viewport height */
+        /* max-width and max-height from above still apply */
+    }
 }
 
 #background {
@@ -26,11 +42,11 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-size: cover; /* Membuat gambar latar belakang menutupi seluruh area */
-    background-position: center; /* Memposisikan gambar latar belakang di tengah */
-    z-index: 1; /* Latar belakang di bawah elemen lain */
-    transition: opacity 1s ease-in-out; /* Transisi opacity untuk pergantian latar belakang */
-    opacity: 0; /* Dimulai dengan opacity 0, akan diubah JS */
+    background-size: cover; /* Cover entire area with background image */
+    background-position: center; /* Center the background image */
+    z-index: 1; /* Lowest layer for background */
+    transition: opacity 1.2s ease-in-out; /* Slower transition for a smoother fade */
+    opacity: 0; /* Start hidden, revealed by JS */
 }
 
 #characters {
@@ -40,19 +56,17 @@ body {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center; /* Awalnya kita bisa atur di tengah */
-    align-items: flex-end; /* Karakter biasanya di bagian bawah */
-    pointer-events: none; /* Membuat area karakter "tembus" klik, agar klik diteruskan ke elemen di bawahnya jika tidak ada karakter */
-    z-index: 2; /* Karakter di atas latar belakang */
+    justify-content: center; /* Center characters horizontally */
+    align-items: flex-end; /* Align characters to the bottom */
+    pointer-events: none; /* Allow clicks to pass through character area */
+    z-index: 2; /* Characters above background */
 }
 
 #characters img {
-    max-height: 80%; /* Tinggi maksimum karakter relatif terhadap area karakter */
-    margin-bottom: 20px; /* Sedikit ruang di bawah karakter */
-    /* margin-left dan margin-right tidak perlu jika hanya 1 karakter di tengah */
-    /* Untuk banyak karakter, bisa diatur secara dinamis oleh JS */
-    opacity: 0; /* Mulai dengan opacity 0 untuk transisi */
-    transition: opacity 0.5s ease-in-out; /* Transisi untuk karakter muncul */
+    max-height: 85%; /* Characters take up a bit more vertical space */
+    margin-bottom: 30px; /* More space below characters */
+    opacity: 0; /* Start hidden, revealed by JS */
+    transition: opacity 0.6s ease-in-out; /* Smooth fade-in for characters */
 }
 
 #dialogue-box {
@@ -60,103 +74,111 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    min-height: 150px; /* Tinggi minimum kotak dialog */
-    background-color: rgba(0, 0, 0, 0.8); /* Latar belakang semi-transparan untuk dialog */
-    color: white;
-    padding: 20px;
-    box-sizing: border-box; /* Padding termasuk dalam lebar dan tinggi */
-    z-index: 3; /* Kotak dialog di atas karakter */
+    min-height: 180px; /* Taller dialogue box */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black for dialogue box */
+    backdrop-filter: blur(5px); /* Glassmorphism effect */
+    -webkit-backdrop-filter: blur(5px); /* Safari support for backdrop-filter */
+    color: #e0e0e0; /* Light grey text for better contrast on dark background */
+    padding: 25px; /* More padding */
+    box-sizing: border-box;
+    z-index: 3; /* Dialogue box above characters */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Untuk mendorong tombol ke bawah */
-    opacity: 0; /* Dimulai dengan opacity 0, akan diubah JS */
-    transition: opacity 0.5s ease-in-out; /* Transisi opacity untuk kotak dialog */
+    justify-content: space-between; /* Push next button to bottom */
+    opacity: 0; /* Start hidden, revealed by JS */
+    transition: opacity 0.6s ease-in-out; /* Smooth fade-in for dialogue box */
+    border-top: 1px solid rgba(255, 255, 255, 0.08); /* Subtle border at the top */
 }
 
 #character-name {
     font-family: 'Playfair Display', serif;
-    font-size: 1.2em;
-    margin-bottom: 5px;
-    color: #ffd700; /* Warna nama karakter */
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Efek bayangan teks */
+    font-size: 1.3em; /* Larger character name */
+    margin-bottom: 8px;
+    color: #ffd700; /* Golden yellow for warm accent */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* Stronger text shadow */
 }
 
 #dialogue-text {
-    font-size: 1em;
-    line-height: 1.6;
-    margin-bottom: 15px; /* Ruang sebelum tombol */
-    flex-grow: 1; /* Memungkinkan teks mengambil ruang yang tersedia */
+    font-size: 1.1em; /* Larger dialogue text for readability */
+    line-height: 1.7; /* Increased line height for better readability */
+    margin-bottom: 20px;
+    flex-grow: 1;
 }
 
 #next-button {
-    align-self: flex-end; /* Posisikan tombol di kanan bawah */
-    background-color: #555;
-    color: white;
+    align-self: flex-end; /* Align button to bottom-right */
+    background-color: #3f72af; /* Soft dark blue */
+    color: #e0e0e0; /* Light text on button */
     border: none;
-    padding: 10px 20px;
-    font-size: 1em;
+    padding: 12px 25px; /* Larger button */
+    font-size: 1.05em;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.1s ease; /* Efek transisi hover dan klik */
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.1s ease; /* Smooth hover and click effects */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Subtle shadow on button */
 }
 
 #next-button:hover {
-    background-color: #777;
-    transform: translateY(-2px); /* Sedikit naik saat hover */
+    background-color: #4a80c9; /* Slightly brighter blue on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
 }
 
 #next-button:active {
-    transform: translateY(1px); /* Sedikit turun saat diklik */
+    transform: translateY(1px); /* Press down effect on click */
+    background-color: #30609f; /* Slightly darker blue on click */
 }
 
 #choices-container {
     position: absolute;
-    bottom: 180px; /* Di atas kotak dialog, sesuaikan jika tinggi dialog berubah */
+    bottom: 200px; /* Positioned above the dialogue box */
     left: 50%;
-    transform: translateX(-50%); /* Posisi tengah horizontal */
-    background-color: rgba(0, 0, 0, 0.85);
-    color: white;
-    padding: 15px;
-    border-radius: 8px;
-    z-index: 4; /* Pilihan di atas kotak dialog */
+    transform: translateX(-50%); /* Center horizontally */
+    background-color: rgba(0, 0, 0, 0.88); /* Darker semi-transparent background for choices */
+    color: #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 4; /* Choices above dialogue box */
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    gap: 12px; /* More space between choice buttons */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 #choices-container button {
-    background-color: #333;
-    color: white;
+    background-color: #2a4d69; /* Soft dark blue-green for choice buttons */
+    color: #e0e0e0;
     border: none;
-    padding: 10px 15px;
-    font-size: 1em;
+    padding: 12px 20px;
+    font-size: 1.05em;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 6px;
     transition: background-color 0.3s ease, transform 0.1s ease;
-    min-width: 200px; /* Lebar minimum tombol pilihan */
+    min-width: 250px; /* Wider choice buttons */
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
 #choices-container button:hover {
-    background-color: #555;
-    transform: translateY(-2px);
+    background-color: #3b6b8b; /* Slightly brighter blue-green on hover */
+    transform: translateY(-3px);
 }
 
 #choices-container button:active {
     transform: translateY(1px);
+    background-color: #1e3a50; /* Slightly darker blue-green on click */
 }
 
-/* Styling untuk layar loading */
+/* Styling for loading screen */
 #loading-screen {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.9);
-    color: white;
-    font-size: 2em;
+    background-color: #1a1a2e; /* Same as body background */
+    color: #e0e0e0;
+    font-size: 2.2em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -166,14 +188,13 @@ body {
 }
 
 #loading-screen::after {
-    content: 'Memuat...'; /* Teks di bawah spinner */
-    font-size: 0.5em;
-    margin-top: 10px;
-    animation: pulse 1.5s infinite alternate; /* Animasi berkedip */
+    content: 'Memuat...';
+    font-size: 0.6em;
+    margin-top: 15px;
+    animation: pulse 1.8s infinite alternate; /* Slower pulsing animation for loading text */
 }
 
-/* Animasi untuk loading screen (opsional) */
 @keyframes pulse {
-    from { opacity: 0.7; }
+    from { opacity: 0.6; }
     to { opacity: 1; }
 }
